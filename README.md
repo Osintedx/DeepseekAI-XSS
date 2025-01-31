@@ -112,7 +112,7 @@ When this payload is executed:
 ---
 
 #### **Timeline**
-- **Date of Discovery**: January 31, 2025
+- **Date of Discovery**: January 31, 2025, 7:45:00 PM CST (Central Standard Time)
 - **Reported To DeepSeek**: [Pending Evalution]
 - **Acknowledgment**: [N/A]
 - **Patch Status**: [N/A]
