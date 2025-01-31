@@ -49,7 +49,6 @@ postMessage(
 ##### **Exploit Code:**
 For easier testing, an iframe-based PoC was created to demonstrate the issue:
 ```html
-<!-- DOM XSS at deepseek.com by nam@namcoder.com -->
 <iframe
     width="600px"
     height="600px"
