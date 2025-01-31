@@ -113,9 +113,9 @@ When this payload is executed:
 
 #### **Timeline**
 - **Date of Discovery**: January 31, 2025
-- **Reported To DeepSeek**: [Pending]
-- **Acknowledgment**: [Pending]
-- **Patch Status**: [Pending]
+- **Reported To DeepSeek**: [Pending Evalution]
+- **Acknowledgment**: [N/A]
+- **Patch Status**: [N/A]
 
 ---
 
