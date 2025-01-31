@@ -1,7 +1,3 @@
-Here’s a draft for the GitHub XSS vulnerability disclosure report based on your findings:
-
----
-
 ### **DOM-Based XSS Vulnerability Disclosure: DeepSeek.com**
 
 #### **Summary**
@@ -113,6 +109,3 @@ This vulnerability allows attackers to execute arbitrary JavaScript in the conte
 #### **Contact Information**
 If you have any questions or need additional details, please feel free to contact me at [your email address].  
 
----
-
-Feel free to adjust any part of the disclosure to match your communication style or specific details.
