@@ -78,14 +78,36 @@ When this payload is executed:
 
 ---
 
-#### **Recommendations**
-To mitigate this vulnerability, it is critical to:
-1. **Validate Message Origin**: Ensure that the `postMessage` event's `origin` matches a trusted domain:
+#### Recommendations
+1. **Validate Message Origin**: Ensure that the `postMessage` event's `origin` matches `https://cdn.deepseek.com`:
    ```javascript
-   if (e.origin !== "https://trusted-origin.com") return;
+   window.addEventListener("message", (e) => {
+       if (e.origin !== "https://cdn.deepseek.com") return;
+
+       // Handle the message securely
+       const data = e.data;
+
+       // Example: Sanitize and insert content
+       if (data && data.__deepseekCodeBlock) {
+           const sanitizedContent = DOMPurify.sanitize(data.__deepseekCodeBlock);
+           const codeBlock = document.createElement("pre");
+           codeBlock.textContent = sanitizedContent;
+           document.body.appendChild(codeBlock);
+       }
+   });
    ```
-2. **Sanitize User Input**: Use a library such as DOMPurify to sanitize the HTML content in `e.data.__deepseekCodeBlock` before inserting it into the DOM.
-3. **Avoid `document.write`**: Replace `document.write` with safer DOM manipulation methods like `createElement` and `appendChild`.
+
+2. **Sanitize User Input**: Use a library like **DOMPurify** to sanitize the HTML content before inserting it into the DOM. This helps prevent XSS attacks:
+   ```javascript
+   const sanitizedContent = DOMPurify.sanitize(e.data.__deepseekCodeBlock);
+   ```
+
+3. **Avoid `document.write`**: Replace `document.write` with modern DOM manipulation methods:
+   ```javascript
+   const codeBlock = document.createElement("pre");
+   codeBlock.textContent = sanitizedContent;
+   document.body.appendChild(codeBlock);
+   ```
 
 ---
 
