@@ -125,8 +125,3 @@ This vulnerability allows attackers to execute arbitrary JavaScript in the conte
 - Defacement or injection of malicious content.
 - Further exploitation of users accessing the compromised page.
 
----
-
-#### **Contact Information**
-If you have any questions or need additional details, please feel free to contact me at [your email address].  
-
